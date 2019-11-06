@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ljh.cash.gift_management.mapper.SchoolMapper">
+    <sql id="table_name">
+        gift_management.school
+    </sql>
+    <!--    <sql id="school_column">-->
+    <!--        school_name, school_address, province, city-->
+    <!--    </sql>-->
+
+    <select id="selectSchools" resultType="com.ljh.cash.gift_management.model.SchoolModel">
+        select *
+        from gift_management.school
+    </select>
+
+    <update id="updateSchool" parameterType="com.ljh.cash.gift_management.model.SchoolModel">
+        update gift_management.school
+        <set>
+            <if test="school_name != null">
+                school.school_name = #{school_name, jdbcType=VARCHAR},
+            </if>
+            <if test="school_address != null">
+                school.school_address= #{school_address, jdbcType=VARCHAR},
+            </if>
+        </set>
+        <where>
+            id = #{id, jdbcType=INTEGER}
+        </where>
+    </update>
+</mapper>
