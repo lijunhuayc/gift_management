@@ -5,7 +5,7 @@
         gift_management.school
     </sql>
     <!--    <sql id="school_column">-->
-    <!--        school_name, school_address, province, city-->
+    <!--        s_name, s_address, province, city-->
     <!--    </sql>-->
 
     <select id="selectSchools" resultType="com.ljh.cash.gift_management.domain.model.SchoolModel">

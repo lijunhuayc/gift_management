@@ -1,6 +1,7 @@
 package com.ljh.cash.gift_management.domain.mapper;
 
 import com.ljh.cash.gift_management.domain.model.SchoolModel;
+import com.ljh.cash.gift_management.domain.model.UserModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,19 +17,26 @@ import java.util.List;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SchoolMapperTest {
+public class UserMapperTest {
 
     @Autowired
-    private SchoolMapper schoolMapper;
+    private UserMapper userMapper;
 
     @Test
-    public void insert() throws Exception {
+    public void testInsert() throws Exception {
+        UserModel userModel = new UserModel();
+        userModel.setName("黄晓明");
+        userModel.setAge(34);
+        userModel.setSex(1);
+        userModel.setAddress("大巴上萧红市阆中区24号");
+        userModel.setSchool_id(2L);
+        userModel.setEmail("huangxiaoming@meb.com");
+        userModel.setId(1L);
+
         int result = 0;
         List<SchoolModel> list = null;
         try {
-//            result = schoolMapper.insert(new SchoolModel(null, "四川省大英中学", "四川省遂宁市大英县", null, null));
-            result = schoolMapper.updateSchool2(new SchoolModel(4L, "四川省大英中学3", "四川省遂宁市大英县3", null, null));
-//            list = schoolMapper.selectSchools();
+            result = userMapper.insert(userModel);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

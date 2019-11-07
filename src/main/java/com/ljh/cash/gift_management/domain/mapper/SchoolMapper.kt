@@ -11,20 +11,20 @@ import org.apache.ibatis.annotations.*
  */
 @Mapper
 interface SchoolMapper {
-    @Insert("insert into gift_management.school(school_name, school_address, province, city) values(#{school_name},#{school_name},#{province},#{city})")
+    @Insert("insert into gift_management.school_id(s_name, s_address, province, city) values(#{s_name},#{s_name},#{province},#{city})")
     fun insert(schoolModel: SchoolModel): Int
 
     @DeleteProvider(type = SchoolProvider::class, method = "deleteSchoolById")
     fun deleteSchoolById(@Param("id") schoolId: Int)
 
-    @Select("select * from gift_management.school")
+    @Select("select * from gift_management.school_id")
     fun selectSchools2(): List<SchoolModel>
 
-    //    @Select("select * from gift_management.school")
+    //    @Select("select * from gift_management.school_id")
     fun selectSchools(): List<SchoolModel>
 
     fun updateSchool(schoolModel: SchoolModel): Int
 
-    @Update("update gift_management.school set school_name=#{school_name}, school_address=#{school_address} where id = #{id}")
+    @Update("update gift_management.school_id set s_name=#{s_name}, s_address=#{s_address} where id = #{id}")
     fun updateSchool2(schoolModel: SchoolModel): Int
 }
