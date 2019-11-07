@@ -1,6 +1,6 @@
 package com.ljh.cash.gift_management.controller
 
-import com.ljh.cash.gift_management.model.SchoolModel
+import com.ljh.cash.gift_management.domain.model.SchoolModel
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod

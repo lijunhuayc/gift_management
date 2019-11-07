@@ -1,4 +1,4 @@
-package com.ljh.cash.gift_management.initialize
+package com.ljh.cash.gift_management.configuration
 
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner

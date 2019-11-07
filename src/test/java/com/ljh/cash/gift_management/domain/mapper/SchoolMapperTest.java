@@ -1,6 +1,6 @@
-package com.ljh.cash.gift_management.mapper;
+package com.ljh.cash.gift_management.domain.mapper;
 
-import com.ljh.cash.gift_management.model.SchoolModel;
+import com.ljh.cash.gift_management.domain.model.SchoolModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

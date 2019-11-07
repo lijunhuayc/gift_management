@@ -1,4 +1,4 @@
-package com.ljh.cash.gift_management.component
+package com.ljh.cash.gift_management.configuration
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component

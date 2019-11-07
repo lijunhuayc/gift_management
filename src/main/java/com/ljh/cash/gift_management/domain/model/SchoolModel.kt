@@ -1,4 +1,4 @@
-package com.ljh.cash.gift_management.model
+package com.ljh.cash.gift_management.domain.model
 
 /**
  * Description:

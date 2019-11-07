@@ -1,4 +1,4 @@
-package com.ljh.cash.gift_management.mapper.provider
+package com.ljh.cash.gift_management.domain.mapper.provider
 
 /**
  * Description:

@@ -1,7 +1,7 @@
-package com.ljh.cash.gift_management.mapper
+package com.ljh.cash.gift_management.domain.mapper
 
-import com.ljh.cash.gift_management.mapper.provider.SchoolProvider
-import com.ljh.cash.gift_management.model.SchoolModel
+import com.ljh.cash.gift_management.domain.mapper.provider.SchoolProvider
+import com.ljh.cash.gift_management.domain.model.SchoolModel
 import org.apache.ibatis.annotations.*
 
 /**
