@@ -89,6 +89,26 @@
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
         </dependency>
+        <dependency>
+            <!-- mybatis-plus 自动依赖mybatis相关的包 -->
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+        <!--mybatis-plus代码生成器 相关依赖-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+        <!--pojo实用小插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <!--依赖不传递-->
+            <optional>true</optional>
+        </dependency>
+        
         <!-- springboot 默认自己带依赖 thymeleaf3 -->
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.boot</groupId>-->
