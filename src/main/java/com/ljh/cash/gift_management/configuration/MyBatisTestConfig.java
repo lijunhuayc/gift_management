@@ -1,9 +1,7 @@
 package com.ljh.cash.gift_management.configuration;
 
-import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import com.zaxxer.hikari.HikariDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.context.annotation.Bean;
@@ -30,7 +28,7 @@ public class MyBatisTestConfig {
     private String password;
 
     @Bean
-    public PropertiesFactoryBean configProperties() throws Exception{
+    public PropertiesFactoryBean configProperties() throws Exception {
         PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         propertiesFactoryBean.setLocations(resolver.getResources("classpath*:application.properties"));
@@ -58,12 +56,12 @@ public class MyBatisTestConfig {
     }
 
     @Bean
-    public MybatisSqlSessionFactoryBean sqlSessionFactory() throws Exception{
-        MybatisSqlSessionFactoryBean sqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
+    public SqlSessionFactoryBean sqlSessionFactory() throws Exception {
+        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath*:com/gitee/sunchenbin/mybatis/actable/mapping/*/*.xml"));
-        sqlSessionFactoryBean.setTypeAliasesPackage("com.ljh.cash.gift_management.domain.model.*");
+//        sqlSessionFactoryBean.setTypeAliasesPackage("com.ljh.cash.gift_management.domain.model.*");
         return sqlSessionFactoryBean;
     }
 

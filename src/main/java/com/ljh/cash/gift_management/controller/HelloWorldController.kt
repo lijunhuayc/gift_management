@@ -2,8 +2,9 @@ package com.ljh.cash.gift_management.controller
 
 import com.ljh.cash.gift_management.domain.model.SchoolModel
 import org.springframework.stereotype.Controller
-import org.springframework.web.bind.annotation.*
-import reactor.core.publisher.Mono
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestMethod
+import org.springframework.web.bind.annotation.ResponseBody
 
 /**
  * Description:
@@ -24,14 +25,4 @@ class HelloWorldController {
     fun say2(): String {
         return "test-web"
     }
-
-    /**
-     * webflux
-     */
-    @ResponseBody
-    @GetMapping("/test_webflux")
-    fun testWebFlux(): Mono<String> {
-        return Mono.just("welcome to reactive world~")
-    }
-
 }

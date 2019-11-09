@@ -25,10 +25,10 @@ public class UserMapperTest {
     @Test
     public void testInsert() throws Exception {
         UserModel userModel = new UserModel();
-        userModel.setName("黄晓明");
-        userModel.setAge(34);
-        userModel.setSex(1);
-        userModel.setAddress("大巴上萧红市阆中区24号");
+        userModel.setName("angle baby");
+        userModel.setAge(24);
+        userModel.setSex(2);
+        userModel.setAddress("成都市高新区24号");
         userModel.setSchool_id(2L);
         userModel.setEmail("huangxiaoming@meb.com");
 //        userModel.setId(1L);
@@ -42,9 +42,9 @@ public class UserMapperTest {
             System.out.println(e.getMessage());
         }
         System.out.println("result = " + result);
-        UserModel userModel2 = userMapper.selectById(1L);
-        System.out.println("userModel2 = " + userModel2);
-        System.out.println("list = " + list);
+//        UserModel userModel2 = userMapper.selectById(1L);
+//        System.out.println("userModel2 = " + userModel2);
+//        System.out.println("list = " + list);
     }
 
 }
