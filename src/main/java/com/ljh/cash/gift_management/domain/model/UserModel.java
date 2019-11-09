@@ -11,7 +11,7 @@ import lombok.Data;
  * Date: 16:00 2019/11/7
  */
 @Data
-@Table(name = "user")
+@Table(name = "UserModel")
 public class UserModel {
     @Column(name = "id", type = MySqlTypeConstant.INT, length = 11, isKey = true, isAutoIncrement = true)
     private Long id;

@@ -16,7 +16,7 @@ public class MyBatisMapperScannerConfig {
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer() throws Exception {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-        mapperScannerConfigurer.setBasePackage("com.example.mapper.*;com.gitee.sunchenbin.mybatis.actable.dao.*");
+        mapperScannerConfigurer.setBasePackage("com.ljh.cash.gift_management.domain.*;com.gitee.sunchenbin.mybatis.actable.dao.*");
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
         return mapperScannerConfigurer;
     }

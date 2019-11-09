@@ -7,7 +7,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
-@MapperScan(basePackages = ["com.ljh.cash.gift_management.domain"])
+@MapperScan(basePackages = ["com.ljh.cash.gift_management.domain.mapper"])
 open class GiftManagementApplication : SpringBootServletInitializer() {
     override fun configure(builder: SpringApplicationBuilder): SpringApplicationBuilder {
         return builder.sources(GiftManagementApplication::class.java)

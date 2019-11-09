@@ -1,5 +1,6 @@
 package com.ljh.cash.gift_management.configuration;
 
+import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import com.zaxxer.hikari.HikariDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,12 +58,12 @@ public class MyBatisTestConfig {
     }
 
     @Bean
-    public SqlSessionFactoryBean sqlSessionFactory() throws Exception{
-        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+    public MybatisSqlSessionFactoryBean sqlSessionFactory() throws Exception{
+        MybatisSqlSessionFactoryBean sqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath*:com/gitee/sunchenbin/mybatis/actable/mapping/*/*.xml"));
-        sqlSessionFactoryBean.setTypeAliasesPackage("com.example.entity.*");
+        sqlSessionFactoryBean.setTypeAliasesPackage("com.ljh.cash.gift_management.domain.model.*");
         return sqlSessionFactoryBean;
     }
 

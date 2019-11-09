@@ -31,7 +31,8 @@ public class UserMapperTest {
         userModel.setAddress("大巴上萧红市阆中区24号");
         userModel.setSchool_id(2L);
         userModel.setEmail("huangxiaoming@meb.com");
-        userModel.setId(1L);
+//        userModel.setId(1L);
+
 
         int result = 0;
         List<SchoolModel> list = null;
@@ -41,6 +42,8 @@ public class UserMapperTest {
             System.out.println(e.getMessage());
         }
         System.out.println("result = " + result);
+        UserModel userModel2 = userMapper.selectById(1L);
+        System.out.println("userModel2 = " + userModel2);
         System.out.println("list = " + list);
     }
 
