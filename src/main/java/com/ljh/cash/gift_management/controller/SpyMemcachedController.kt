@@ -21,13 +21,13 @@ class SpyMemcachedController {
     fun spyMemcachedIne(): String {
         spyMemcachedConfig?.apply {
             client?.apply {
-                set("test_key", 2, "周星星")    //exp参数为缓存过期时间(秒)
+                set("test_key", 2, "周星星你是谁")    //exp参数为缓存过期时间(秒)
                 println("spyMemcached: 缓存 test_key = " + this["test_key"])
-                Thread.sleep(2000)
+                Thread.sleep(1000)
                 println("spyMemcached: 1秒后缓存 test_key = " + this["test_key"])
             }
         }
-        return "test sypMemcached cache value."
+        return "test sypMemcached cache value!"
     }
 
 }

@@ -7,6 +7,6 @@ package com.ljh.cash.gift_management.domain.mapper.provider
  */
 class SchoolProvider {
     fun deleteSchoolById(id: Int): String {
-        return "delete from gift_management.school_id where id = $id"
+        return "delete from gift_management.school where id = $id"
     }
 }

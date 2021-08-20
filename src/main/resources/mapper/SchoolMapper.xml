@@ -4,23 +4,24 @@
     <sql id="table_name">
         gift_management.school
     </sql>
-    <!--    <sql id="school_column">-->
-    <!--        s_name, s_address, province, city-->
-    <!--    </sql>-->
 
-    <select id="selectSchools" resultType="com.ljh.cash.gift_management.domain.model.SchoolModel">
+    <sql id="school_column">
+        s_name, s_address, province, city
+    </sql>
+
+    <select id="selectSchools" resultType="SchoolModel2">
         select *
         from gift_management.school
     </select>
 
-    <update id="updateSchool" parameterType="com.ljh.cash.gift_management.domain.model.SchoolModel">
+    <update id="updateSchool" parameterType="SchoolModel2">
         update gift_management.school
         <set>
-            <if test="school_name != null">
-                school.school_name = #{school_name, jdbcType=VARCHAR},
+            <if test="s_name != null">
+                school.s_name = #{s_name, jdbcType=VARCHAR},
             </if>
-            <if test="school_address != null">
-                school.school_address= #{school_address, jdbcType=VARCHAR},
+            <if test="s_address != null">
+                school.s_address = #{s_address, jdbcType=VARCHAR},
             </if>
         </set>
         <where>

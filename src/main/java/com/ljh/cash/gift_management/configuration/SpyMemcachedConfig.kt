@@ -4,6 +4,7 @@ import net.spy.memcached.MemcachedClient
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Configuration
+import org.springframework.stereotype.Component
 import java.net.InetSocketAddress
 
 /**
@@ -11,7 +12,8 @@ import java.net.InetSocketAddress
  * Author: herily
  * Date: 16:17 2019/11/6
  */
-@Configuration
+//@Configuration
+@Component
 open class SpyMemcachedConfig : CommandLineRunner {
     @Value("\${memcache.ip}")
     var ip: String = ""

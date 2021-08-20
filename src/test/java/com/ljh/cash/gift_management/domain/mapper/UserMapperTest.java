@@ -25,26 +25,35 @@ public class UserMapperTest {
     @Test
     public void testInsert() throws Exception {
         UserModel userModel = new UserModel();
-        userModel.setName("angle baby");
-        userModel.setAge(24);
-        userModel.setSex(2);
-        userModel.setAddress("成都市高新区24号");
-        userModel.setSchool_id(2L);
-        userModel.setEmail("huangxiaoming@meb.com");
+        userModel.setName("黄 baby22");
+        userModel.setAge(15);
+        userModel.setSex(0);
+        userModel.setAddress("成都市高新区211号");
+        userModel.setSchool_id(121L);
+        userModel.setEmail("huangxiaoming@meb22.com");
 //        userModel.setId(1L);
 
-
         int result = 0;
-        List<SchoolModel> list = null;
-        try {
-            result = userMapper.insert(userModel);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        System.out.println("result = " + result);
-//        UserModel userModel2 = userMapper.selectById(1L);
-//        System.out.println("userModel2 = " + userModel2);
-//        System.out.println("list = " + list);
+        List<UserModel> list = null;
+//        try {
+//            result = userMapper.insertUser(userModel);
+//            System.out.println("result = " + result);
+//
+//            userModel.setId(2L);
+//            userModel.setName("秀一改不信a ？");
+//            userModel.setAge(48);
+//            userModel.setSex(1);
+//            result = userMapper.updateUser(userModel);
+//            System.out.println("result = " + result);
+//
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//        }
+        UserModel userModel2 = userMapper.selectUserById(1L);
+        System.out.println("userModel2 = " + userModel2);
+
+        list = userMapper.selectUserList();
+        System.out.println("list = " + list);
     }
 
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 注意：在mybatis-config 中配置mapper的所有方式均需要 xml和接口文件同路径 -->
+
+    <typeAliases>
+<!--        <typeAlias type="com.ljh.cash.gift_management.domain.model.SchoolModel" alias="SchoolModel"/>-->
+        <package name="com.ljh.cash.gift_management.domain.model"/>
+    </typeAliases>
+
+</configuration>

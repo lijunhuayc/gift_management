@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ljh.cash.gift_management.domain.mapper.UserMapper">
+    <sql id="table_name">
+        id, name, age
+    </sql>
+
+    <select id="selectUserById" resultType="usermodel">
+        select * from user
+        <where>
+            id = #{id}
+        </where>
+    </select>
+
+    <update id="updateUser" parameterType="UserModel">
+        update gift_management.user
+        <set>
+            <if test="name != null">
+                user.name = #{name, jdbcType=VARCHAR},
+            </if>
+            <if test="age != null">
+                user.age = #{age},
+            </if>
+            <if test="sex != null">
+                user.sex = #{sex},
+            </if>
+            <if test="email != null">
+                user.email = #{email},
+            </if>
+            <if test="address != null">
+                user.address = #{address},
+            </if>
+            <if test="school_id != null">
+                user.school_id = #{school_id},
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+</mapper>

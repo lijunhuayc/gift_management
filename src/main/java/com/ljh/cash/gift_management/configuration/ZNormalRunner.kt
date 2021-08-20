@@ -2,6 +2,7 @@ package com.ljh.cash.gift_management.configuration
 
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Configuration
+import org.springframework.stereotype.Component
 
 /**
  * Description: SpringApplication.run 时初始化资源
@@ -12,7 +13,8 @@ import org.springframework.context.annotation.Configuration
  */
 @Configuration
 //@Component
-open class NormalRunner : CommandLineRunner {
+//此处的 @Configuration 和 @Component 效果相同
+open class ZNormalRunner : CommandLineRunner {
     override fun run(vararg args: String?) {
         println("The NormalRunner start to initialize...")
     }
